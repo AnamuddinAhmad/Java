@@ -20,3 +20,10 @@ public class table
         }
     }
 }
+// //for decreasing printing table
+System.out.println("//From here decreasing table printing //");
+for(int i=10;i>=1;i--)
+{
+System.out.printf("%d X %d = %d \n",a,i,a*i);
+
+}
