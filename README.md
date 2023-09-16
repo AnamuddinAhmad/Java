@@ -12,22 +12,29 @@ To use the `Calculator` class, follow these steps:
 2. Call the `findAverage` method with three numbers as arguments.
 3. The method will return the average rounded to two decimal digits.
 
+## Sample Input and Output
+1. `double` num1 = 65;
+2. `double` num2 = 175;
+3. `double` num3 = num1 / num2;
+4. System.out.println(Math.round(num3 * 100.0) / 100.0);
+    
 ```java
-Calculator calculator = new Calculator();
-double num1 = 65;
-double num2 = 175;
-double num3 = num1 / num2;
-double average = calculator.findAverage(num1, num2, num3);
+import java.text.DecimalFormat;
 
-```Sample Input and Output
+class Calculator {
+    DecimalFormat df = new DecimalFormat("0.00");
 
-double num1 = 65;
-double num2 = 175;
-double num3 = num1 / num2;
-System.out.println(Math.round(num3 * 100.0) / 100.0);
+    public double findAverage(int number1, int number2, int number3) {
+        double avg = (double) (number1 + number2 + number3) / 3;
+        return Double.parseDouble(df.format(avg));
+    }
+}
 
-Customize the content to provide more information about your project, its purpose, usage, and any additional details you want to include.
+class Tester {
+    public static void main(String args[]) {
+        Calculator calculator = new Calculator();
+        double res = calculator.findAverage(12, 8, 15);
+        System.out.println(res);
 
-Your Java project now has a README file hosted on GitHub, providing information about the project and how to use it.
- Users and collaborators can refer to this README for guidance on your project's functionality and usage.
-
+    }
+}
