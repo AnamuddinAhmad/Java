@@ -4,7 +4,6 @@ public class CountingSort {
     public static void main(String[] args) {
       // Given array.
         int[] arr = { 0, 0, 1, 1, 2, 2, 1, 1, 0, 0, 0, 2, 2, 2, 5, 5 };
-        Arrays.sort(arr);
         counting_sort(arr);
     }
 
